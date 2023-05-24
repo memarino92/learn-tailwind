@@ -1,31 +1,4 @@
-import { Outlet } from 'react-router-dom';
-
-export function App() {
-  return (
-    <>
-      <div className='flex h-screen text-gray-100'>
-        <div className='space-y-2 overflow-y-scroll bg-gray-900 p-3'>
-          <a
-            href='/'
-            className='flex h-12 w-12 items-center justify-center rounded-3xl bg-gray-700 text-gray-100 transition-all duration-200 hover:rounded-2xl hover:bg-brand hover:text-white'
-          >
-            <DiscordIcon className='h-5 w-7' />
-          </a>
-          <a
-            href='/servers/s1'
-            className='flex h-12 w-12 items-center justify-center rounded-3xl bg-gray-700 text-gray-100 transition-all duration-200 hover:rounded-2xl hover:bg-brand hover:text-white'
-          >
-            S1
-          </a>
-        </div>
-
-        <Outlet />
-      </div>
-    </>
-  );
-}
-
-function DiscordIcon(props) {
+export function DiscordIcon(props) {
   return (
     <svg aria-hidden='false' viewBox='0 0 28 20' {...props}>
       <path
@@ -35,5 +8,3 @@ function DiscordIcon(props) {
     </svg>
   );
 }
-
-export default App;
